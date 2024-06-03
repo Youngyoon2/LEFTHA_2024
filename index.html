@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEFTHA</title>
+    <!-- Noto Sans, Noto Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Century Gothic -->
+    <link rel="stylesheet" href="https://use.typekit.net/mpt6dxd.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="top_banner">
+        <!-- Swiper -->
+        <div class="swiper swiper_top">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p>Brighten your leftside</p>
+                </div><!-- slide -->
+                <div class="swiper-slide">
+                    <p>All Creation starts with writing</p>
+                </div><!-- slide -->
+            </div><!-- wrapper -->
+        </div><!-- swiper_top -->
+    </div><!-- top_banner -->
+    <header>
+        <div class="header_inner">
+            <div class="logo">
+                <a href="./index.html"><img src="./images/logo.png" alt="레프타 로고"></a>
+            </div><!-- logo -->
+            <ul class="gnb">
+                <li><a href="#none">About</a></li>
+                <li><a href="#none">Ethics</a></li>
+                <li><a href="#none">Products</a></li>
+                <li><a href="#none">Inspiration</a></li>
+                <li><a href="#none">Art by</a></li>
+            </ul><!-- gnb -->
+            <div class="hb">
+                <div class="slide-open" id="slide-open">
+                    <span class="burgur" id="burgur">
+                        <span class="top-line"></span>
+                        <span class="bot-line"></span>
+                    </span>
+                </div><!--slide-open-->
+                <div class="slide" id="slide">
+                    <ul>
+                        <li><a href="#none">About</a></li>
+                        <li><a href="#none">Ethics</a></li>
+                        <li><a href="#none">Products</a></li>
+                        <li><a href="#none">Inspiration</a></li>
+                        <li><a href="#none">Art by</a></li>
+                    </ul>
+                </div><!--slide-->
+            </div><!-- hb -->
+        </div><!-- header_inner -->
+    </header>
+    <div id="main_banner">
+        <!-- Swiper -->
+        <div class="swiper mb">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide mb_2">
+                    <div class="contents">
+                        <div class="wrapper">
+                            <h1>All Creation starts <br class="break">with writing.</h1>
+                            <p>매일 쥐던 펜을 손만 바꾸면 새롭게 느껴지는 것처럼</p>
+                            <P>반복되는 일상에서 재미와 신선함을 잃지 않도록.</p>
+                        </div><!-- wrapper -->
+                    </div><!-- contents -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide mb_1">
+                    <ul class="contents">
+                        <li><img src="./images/mb_logo.png" alt="메인배너 로고"></li>
+                        <li>Brighten your leftside.</li>
+                        <li>모든 창작은 쓰는 것에서부터 시작합니다.<br>
+                            언제 어디서든 생각과 영감을 기록하고 정리할수있도록.<br>
+                            레프타가 그 여정의 시작과 함께합니다.</li>
+                        <li><a href="#none">브랜드 소개</a></li>
+                    </ul>
+                </div><!-- slide -->
+            </div><!-- wrapper -->
+            <div class="swiper-pagination"></div><!-- pag -->
+        </div><!-- mb -->
+    </div><!-- main_banner -->
+    <div id="ethics">
+        <div class="ethics_inner">
+            <ul class="tabs">
+                <li><span data="#tab1">Environment</span></li>
+                <li><span data="#tab2">Support</span></li>
+                <li><span data="#tab3">Education</span></li>
+            </ul>
+            <!--탭 콘텐츠 영역(tabs를 눌렀을때 변화할 내용들이 들어있는 곳) 모든 tab내용은, 각각 다른아이디를 갖고 있어야 하고, 같은 tab-content라는 클래스를 가지고 있어야 합니다.-->
+            <div class="tab_container">
+                <!--모든 내용이 있는 박스는 같은 클래스(tab_content)를 가지고 있고 모두 다른 아이디를 가지고 있어야 한다.-->
+                <div id="tab1" class="tab_content">
+                    <!--Content-->
+                    <div class="img_box">
+                        <img src="./images/ethics1.jpg" alt="환경보호">
+                    </div><!-- img_box -->
+                    <div class="text_box">
+                        <h1>Environment</h1>
+                        <p>레프타의 모든 노트북은 환경 친화적인<br class="break"> 제품을 만들기 위해 중성지를 사용합니다.<br>
+                            생산되는 모든 제품은 FSC인증을 받았습니다.<br>
+                            불필요한 제품 포장을 최소화하고 재활용 등급이<br class="break"> 우수한 재질을 사용합니다.</p>
+                    </div><!-- text_box -->
+                </div><!-- tab1 -->
+                <div id="tab2" class="tab_content">
+                    <!--Content-->
+                    <div class="img_box">
+                        <img src="./images/ethics1.jpg" alt="환경보호">
+                    </div><!-- img_box -->
+                    <div class="text_box">
+                        <h1 class="title">탭2 내용</h1>
+                        <p>레프타의 모든 노트북은 환경 친화적인 제품을 만들기 위해 중성지를 사용합니다.<br>
+                            생산되는 모든 제품은 FSC인증을 받았습니다.<br>
+                            불필요한 제품 포장을 최소화하고 재활용 등급이우수한 재질을 사용합니다.</p>
+                    </div><!-- text_box -->
+                </div><!-- tab2 -->
+                <div id="tab3" class="tab_content">
+                    <!--Content-->
+                    <div class="img_box">
+                        <img src="./images/ethics1.jpg" alt="환경보호">
+                    </div><!-- img_box -->
+                    <div class="text_box">
+                        <h1 class="title">탭3 내용</h1>
+                        <p>레프타의 모든 노트북은 환경 친화적인 제품을 만들기 위해 중성지를 사용합니다.<br>
+                            생산되는 모든 제품은 FSC인증을 받았습니다.<br>
+                            불필요한 제품 포장을 최소화하고 재활용 등급이 우수한 재질을 사용합니다.</p>
+                    </div><!-- text_box -->
+                </div><!-- tab3 -->
+            </div><!--tab_container-->
+        </div><!-- ehtics_inner -->
+    </div><!--ethics-->
+    <div id="category">
+        <h1 class="title">Write your dream with</h1>
+        <div class="swiper card">
+            <div class="swiper-wrapper"><!--swiper-wrapper는 필수 클래스-->
+                <div class="swiper-slide">
+                    <div class="img_box">
+                    </div><!-- img_box -->
+                    <p>커피1</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                    </div><!-- img_box -->
+                    <p>커피1</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                    </div><!-- img_box -->
+                    <p>커피1</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                    </div><!-- img_box -->
+                    <p>커피1</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                    </div><!-- img_box -->
+                    <p>커피1</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                    </div><!-- img_box -->
+                    <p>커피1</p>
+                </div>
+
+            </div>
+
+            <!--도트를 추가하고 싶을때-->
+            <div class="swiper-pagination"></div>
+        </div><!--mb E-->
+        <!--화살표추가-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+
+    </div><!-- category -->
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/script.js"></script>
+
+
+</body>
+
+</html>
