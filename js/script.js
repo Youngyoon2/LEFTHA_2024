@@ -11,6 +11,10 @@ var swiper = new Swiper(".mb", {
     pagination: {
         el: ".swiper-pagination",
     },
+    autoplay: {
+        delay: 2700,
+        disableOnInteraction: false,
+    },
     loop: true
 });
 
@@ -40,36 +44,103 @@ $(document).ready(function () {
 
 /* category */
 var swiper = new Swiper(".card", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },//화살표를 작동하게 하는 옵션.
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },//도트부분을 작동하게 하는 옵션.
-    /*가장 작게 설정한 breakpoint크기 이하일때 적용됨*/
-    slidesPerView: 4,
-    spaceBetween: 10,
-    breakpoints: {
-        500: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },//500 ~ 1099 사이일때 보여지는 모습
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+    },
 
-        849: {
+    /*가장 작게 설정한 breakpoint크기 이하일때 적용됨*/
+    slidesPerView: 2,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+
+    breakpoints: {
+        400: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+        },//500 ~ 849 사이일때 보여지는 모습
+
+        650: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            centeredSlides: false,
+            loop: false,
+        },//500 ~ 849 사이일때 보여지는 모습
+
+        850: {
             slidesPerView: 5,
             spaceBetween: 20,
-        },//640 ~ 1099 사이일때 보여지는 모습
+            centeredSlides: false,
+            loop: false,
+
+        },//640 ~ 999 사이일때 보여지는 모습
         1000: {
             slidesPerView: 6,
             spaceBetween: 20,
+            centeredSlides: false,
+            loop: false,
+
         },//1100~1299 사이일때 보여지는 모습
         1320: {
             slidesPerView: 6,
             spaceBetween: 30,
+            centeredSlides: false,
+            loop: false,
+
         },//1300이상일때 보여지는 모습
     },
 });//지우면 안되요!
 
+var swiper = new Swiper(".slide_art", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 1500, //add      
+        disableOnInteraction: false,
+    },
+    speed: 2000,
+    loop: true,
+    loopAdditionalSlides: 1,
+    spaceBetween: 5,
+    slidesPerView: 1, //가장 작은 사이즈
+    /* 반응형 */
+    breakpoints: {
+        370: {
+            slidesPerView: 2,
+        },//370~529일때
+
+
+        530: {
+            slidesPerView: 3,
+            speed: 4500,
+            autoplay: {
+                delay: 0, //add      
+            },
+
+
+        },//400~699일때
+
+        750: {
+            slidesPerView: 4,
+            speed: 4500,
+            autoplay: {
+                delay: 0, //add      
+            },
+
+        },//700~999일때
+
+        1000: {
+            slidesPerView: 5,
+            speed: 4500,
+            autoplay: {
+                delay: 0, //add      
+            },
+
+        },//1000 이상일때
+    },
+
+});
 
