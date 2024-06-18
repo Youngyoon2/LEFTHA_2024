@@ -12,10 +12,11 @@ var swiper = new Swiper(".mb", {
         el: ".swiper-pagination",
     },
     autoplay: {
-        delay: 2700,
+        delay: 3200,
         disableOnInteraction: false,
     },
-    loop: true
+    loop: true,
+    speed:800
 });
 
 /* ethics */

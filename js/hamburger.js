@@ -18,6 +18,8 @@ $(function () {
     }
   });
 
+
+  /* 이동시 부드럽게 코드 */
   $('a[href*="#"]:not([href="#"])').click(function () {
     if (
       location.pathname.replace(/^\//, "") ==
