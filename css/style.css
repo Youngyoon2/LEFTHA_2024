@@ -175,7 +175,7 @@ header {
     -ms-transition: left .3s;
     -o-transition: left .3s;
     transition: left .3s;
-    background-color: #939580;
+    background-color: rgba(71, 77, 54, 0.9);
 }
 
 .slide-title {
@@ -192,6 +192,12 @@ header {
     left: 0;
 }
 
+.slide ul {
+    padding-left: 15%;
+}
+
+
+/* 헴버거 서브메뉴 이름 */
 .slide ul li {
     display: inline-block;
     width: 100%;
@@ -200,12 +206,18 @@ header {
     box-sizing: border-box;
     font-size: 18px;
     font-family: "century-gothic", sans-serif;
-    color: #474d36;
+    color: #edd896;
     font-weight: bold;
     /* 서브 메뉴 이름 밑줄 */
     /*     border-bottom: 1px solid #e1e1e1;
  */
 }
+
+.slide ul li:first-child {
+    padding-bottom: 40px;
+}
+
+
 
 
 
@@ -252,7 +264,8 @@ header {
 
 /* main_banner */
 #main_banner {
-    margin-top: 94px;
+    padding-top: 188px;
+    margin-top: -94px;
     width: 100%;
 }
 
@@ -290,22 +303,26 @@ header {
     font-family: "century-gothic", "Noto Sans KR";
     font-size: 26px;
     padding: 10px 0;
+    color: #3f311e;
+    font-style: italic;
 }
 
 .mb_1 .contents li:nth-child(3) {
     font-size: 17px;
-    line-height: 25px;
-    font-weight: 500;
+    line-height: 28px;
+    color: #f7f3ed;
+
 }
 
 .mb_1 .contents li:nth-child(4) a {
     display: inline-block;
     font-size: 15px;
     font-weight: bold;
-    color: #63543d;
-    border: 2px solid #63543d;
+    background-color: rgba(71, 77, 54, 0.5);
+    color: #f7f3ed;
     margin-top: 30px;
     padding: 10px 80px;
+    font-weight: 400;
 }
 
 .mb_2 {
@@ -458,7 +475,8 @@ header {
 /* ethics */
 
 #ethics {
-    margin-top: 100px;
+    padding-top: 195px;
+    margin-top: -95px;
 }
 
 .ethics_inner {
@@ -479,7 +497,23 @@ header {
 }
 
 #ethics .tabs li {
+    /* ::after */
+    position: relative;
     cursor: pointer;
+}
+
+
+#ethics .tabs li.active::after {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, -50%);
+    content: " ";
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    background: url(../images/underline.png) no-repeat center center;
+    background-size: cover;
 }
 
 
@@ -590,6 +624,7 @@ header {
 
 /* category */
 #category {
+    overflow: hidden;
     height: 20%;
     background-color: #c9c5ba;
     margin-top: 130px;
@@ -615,7 +650,8 @@ header {
 }
 
 .card .img_box {
-    display: inline-flex;
+    display: flex;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     width: 180px;
@@ -660,6 +696,9 @@ header {
 .card .swiper-scrollbar-drag {
     background-color: #939580;
 }
+
+
+
 
 /* 미디어쿼리 */
 @media (min-width:750px) and (max-width:1319px) {
@@ -715,6 +754,7 @@ header {
     margin: 0 auto;
 }
 
+
 #products .title {
     /* ::after */
     position: relative;
@@ -745,6 +785,17 @@ header {
     justify-content: space-evenly;
 }
 
+#products .img_box {
+    overflow: hidden;
+}
+
+#products .img_box img {
+    transition: all 0.3s;
+    max-width: 300px;
+}
+
+
+
 #products .img_box img:last-child {
     display: none;
 }
@@ -754,9 +805,16 @@ header {
     font-size: 20px;
     font-weight: bold;
     padding-top: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    line-height: 27px;
 
 }
+
+#products .name span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 
 #products .about {
     font-size: 15px;
@@ -765,12 +823,32 @@ header {
 }
 
 #products .price {
+    /* ::after */
+    position: relative;
     font-family: "Noto Serif KR", serif;
     font-size: 20px;
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 
 }
+
+#products .list:hover .price::after {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: " ";
+    display: inline-block;
+    width: 30%;
+    height: 20px;
+    background: url(../images/underline.png) no-repeat center center;
+}
+
+
+#products .list:hover .img_box img {
+    transform: scale(1.05);
+}
+
 
 
 /* 미디어쿼리 */
@@ -796,8 +874,8 @@ header {
         width: 48%;
     }
 
-    #products img {
-        width: 100%;
+    #products .img_box img {
+        max-width: 100%;
     }
 
     #products .img_box img:first-child {
@@ -807,6 +885,11 @@ header {
     #products .img_box img:last-child {
         display: block;
     }
+
+    #products .list:hover .price::after {
+        width: 20%;
+    }
+
 
 }
 
@@ -831,8 +914,8 @@ header {
         width: 96%;
     }
 
-    #products img {
-        width: 100%;
+    #products .img_box img {
+        max-width: 100%;
     }
 
     #products .img_box img:first-child {
@@ -844,12 +927,22 @@ header {
     }
 
     #products .name {
-        font-size: 18px;
+        font-size: 20px;
     }
 
-    #products .price {
-        font-size: 18px;
+    #products .name span {
+        font-size: 17px;
     }
+
+
+    #products .price {
+        font-size: 20px;
+    }
+
+    #products .list:hover .price::after {
+        width: 15%;
+    }
+
 }
 
 /*모바일 끝 */
@@ -928,17 +1021,25 @@ header {
 
 
 #customize .img_box {
+    overflow: hidden;
     width: 53%;
 }
 
 #customize .img_box img {
     max-width: 100%;
+    transition: all 0.5s;
+    filter: saturate(0.3);
 }
 
 #customize .break {
     display: none;
 }
 
+#customize:hover .img_box img {
+    transform: scale(1.1);
+    filter: saturate(1);
+
+}
 
 
 /* 미디어쿼리 */
@@ -1097,6 +1198,11 @@ header {
     width: 100%;
 }
 
+#inspiration #video_box iframe {
+    border-radius: 20px;
+}
+
+
 #inspiration .title {
     text-align: left;
     padding-top: 130px;
@@ -1118,7 +1224,7 @@ header {
     padding: 70px 0;
     font-size: 17px;
     font-weight: 500;
-    color: #edd896;
+    color: #f1d781;
     line-height: 1.7;
 }
 
@@ -1229,9 +1335,12 @@ header {
 }
 
 
+
 .slide_art .swiper-slide img {
     width: 100%;
 }
+
+
 
 #art .swiper-button-next {
     width: 35px;
@@ -1256,7 +1365,6 @@ header {
 #art .swiper-button-prev::after {
     content: url(../images/btn_prev.png);
 }
-
 
 
 
@@ -1322,6 +1430,13 @@ footer {
     color: #c9c5ba;
     font-size: 14px;
     font-weight: bold;
+}
+
+
+.footer_2 .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -1412,7 +1527,7 @@ footer {
     .footer_2 {
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 0;
+        padding: 0 30px;
     }
 
     .footer_2 .wrapper {
@@ -1430,16 +1545,24 @@ footer {
     }
 
     .footer_2 ol li {
-        padding: 0 10px;
-        font-size: 15px;
+        padding: 0 5px;
+        font-size: 14px;
         white-space: nowrap;
 
     }
 
     .footer_2 ul {
         padding-top: 30px;
+        padding-bottom: 20px;
         font-size: 13px;
+        justify-content: center;
     }
+
+    .footer_2 ul li {
+        word-break: keep-all;
+        padding: 0 7px;
+    }
+
 
     .footer_2 dl {
         font-size: 13px;
@@ -1456,25 +1579,47 @@ footer {
         padding-bottom: 3px;
     }
 
+    .copyright {
+        font-size: 13px;
+    }
+}
 
-    /*모바일 끝 */
-
-
-
-
-
-    /* 미디어쿼리 */
-    @media (min-width:750px) and (max-width:1319px) {}
-
-    /*태블릿 끝 */
+/*모바일 끝 */
 
 
-    @media (max-width:749px) {}
 
-    /*모바일 끝 */
+/* 스크롤 커스텀 */
+
+body::-webkit-scrollbar {
+    width: 15px;
+    /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 20%;
+    /* 스크롤바의 길이 */
+    background: rgba(63, 49, 30, 0.8);
+    /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f7f3ed;
+    /*스크롤바 뒷 배경 색상*/
+}
+
+/* 미디어쿼리 */
+@media (min-width:750px) and (max-width:1319px) {}
+
+/*태블릿 끝 */
 
 
-    /* ex 모바일 ~749
+@media (max-width:749px) {}
+
+/*모바일 끝 */
+
+
+/* ex 모바일 ~749
     테블릿 750~1319
      pc 1320~ */
 
@@ -1482,7 +1627,7 @@ footer {
 
 
 
-    /*
+/*
 노란색
 #edd896
 
@@ -1509,7 +1654,7 @@ footer {
 
   */
 
-    /*
+/*
 노토산스 
 .noto-sans-kr-<uniquifier> {
   font-family: "Noto Sans KR", sans-serif;
@@ -1534,11 +1679,10 @@ font-family: "century-gothic", "Noto Sans KR";
 font-weight: 400,700;
 font-style: normal, italic;
  */
-
-    /* 
-섹션별 미디어쿼리
+/* 
+    섹션별 미디어쿼리
 기본 749/750~1319/1320
 ethics  899/900~1319
 custom 749/750~999/1000~1320
-art ~529(등속해제)
+art ~529(등속해제) 
 */
